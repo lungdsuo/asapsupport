@@ -4,7 +4,7 @@
   "newProjectRoot": "projects",
   "projects": {
     "asapsupport": {
-      "root": "",
+      "root": "asapsupport",
       "sourceRoot": "src",
       "projectType": "application",
       "prefix": "app",
