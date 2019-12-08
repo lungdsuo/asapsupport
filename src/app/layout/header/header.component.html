@@ -1,0 +1,48 @@
+<nav class="navbar navbar-expand-lg fixed-top navbar-custom sticky sticky-dark" id="navbar1">
+    <div class="container">
+        <!-- LOGO -->
+        <a class="navbar-brand logo text-uppercase" routerLink="/">
+            <i class="mdi mdi-atom"></i>ASAP SUPPORT
+        </a>
+
+        <button class="navbar-toggler" (click)="toggleMenu()" type="button" id="menu_button" data-toggle="collapse"
+            data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <i class="mdi mdi-menu"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse" scrollSpy>
+            <ul class="nav navbar-nav navbar-right" id="mySidenav">
+                <li class="nav-item">
+                    <a data="id_home" [ngx-scroll-to]="'#home'" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a data="id_features" [ngx-scroll-to]="'#features'" class="nav-link">History</a>
+                </li>
+                <li class="nav-item">
+                    <a data="id_about" [ngx-scroll-to]="'#about'" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a data="id_services" [ngx-scroll-to]="'#services'" class="nav-link">Our Expertise</a>
+                </li>
+
+                <li class="nav-item">
+                    <a data="id_pricing" [ngx-scroll-to]="'#pricing'" class="nav-link">Pricing</a>
+                </li>
+                <!--    <li class="nav-item">
+                    <a data="id_blog" [ngx-scroll-to]="'#blog'" class="nav-link">Blog</a>
+                </li> -->
+                <li class="nav-item">
+                    <a data="id_contact" [ngx-scroll-to]="'#contact'" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <!--    <div class="nav-button ml-auto">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                          <button type="button" class="btn btn-custom navbar-btn btn-rounded waves-effect waves-light">Try
+                            it Free</button> 
+                    </li>
+                </ul>
+            </div> -->
+        </div>
+    </div>
+</nav>

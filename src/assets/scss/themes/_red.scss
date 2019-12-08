@@ -1,0 +1,54 @@
+
+.theme-red {/*  Theme Name: Hiric | Responsive Bootstrap Landing Template
+  Author: Themesbrand
+  Version: 1.1.0
+  File Description: Main CSS file of the template
+*/
+
+.text-custom, .read-btn {
+color: #ee6352 !important;
+}
+
+.navbar-custom.navbar-white .navbar-nav li {
+&.active a {
+  color: #ee6352 !important;
+}
+a {
+  &:hover, &:focus, &:active {
+    color: #ee6352 !important;
+  }
+}
+}
+
+.play-btn, .blog-title:hover, .social-icon:hover i {
+color: #ee6352 !important;
+}
+
+.section-title-border, .bg-custom, .btn-custom, .features-item-list li:before, .process-left-icon-1 i, .process-left-icon-2 i {
+background-color: #ee6352;
+}
+
+.btn-custom, .play-btn {
+border-color: #ee6352 !important;
+}
+
+.btn-custom {
+&:hover, &:focus, &:active, &.active, &.focus, &:active, &:focus, &:hover {
+  background-color: #dc5342;
+}
+}
+
+.open > .dropdown-toggle.btn-custom {
+background-color: #dc5342;
+}
+
+.btn-custom {
+&:hover, &:focus, &:active, &.active, &.focus, &:active, &:focus, &:hover {
+  border-color: #dc5342 !important;
+}
+}
+
+.open > .dropdown-toggle.btn-custom {
+border-color: #dc5342 !important;
+}
+}

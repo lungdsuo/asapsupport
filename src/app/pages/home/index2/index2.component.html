@@ -1,0 +1,48 @@
+<section class="section bg-home home-half" id="home" data-image-src="assets/images/bg-home.jpg">
+    <div class="bg-overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 offset-lg-2 text-white text-center">
+                <h4 class="home-small-title">Awesome Design</h4>
+                <h1 class="home-title">We love making things amazing and simple</h1>
+                <p class="padding-t-15 home-desc mx-auto">Maecenas class semper class semper sollicitudin lectus lorem iaculis imperdiet aliquam vehicula tempor auctor curabitur pede aenean ornare.</p>
+                <p class="play-shadow margin-l-r-auto mb-4"><a (click)="openWindowCustomClass(content)" class="play-btn video-play-icon"><i class="mdi mdi-play text-center"></i></a></p> 
+            </div>
+        </div>
+    </div>
+    <div class="wave-effect wave-anim">
+        <div class="waves-shape shape-one">
+            <div class="wave wave-one" style="background-image: url('assets/images/wave-shape/wave1.png')"></div>
+        </div>
+        <div class="waves-shape shape-two">
+            <div class="wave wave-two" style="background-image: url('assets/images/wave-shape/wave2.png')"></div>
+        </div>
+        <div class="waves-shape shape-three">
+            <div class="wave wave-three" style="background-image: url('assets/images/wave-shape/wave3.png')"></div>
+        </div>
+    </div>
+</section>
+
+<ng-template #content let-modal>
+        <div class="modal-header">
+            <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
+            <youtube-player [videoId]="id" (ready)="savePlayer($event)" height="450" width="780" (change)="onStateChange($event)"
+                [playerVars]="playerVars">
+            </youtube-player>
+        </div>
+    </ng-template>
+
+    <app-client></app-client>
+    <app-feature></app-feature>
+    <app-services></app-services>
+    <app-description></app-description>
+    <app-about></app-about>
+    <app-pricing></app-pricing>
+    <app-testi></app-testi>
+    <app-getstart></app-getstart>
+    <app-blog></app-blog>
+    <app-contact></app-contact>

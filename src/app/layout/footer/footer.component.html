@@ -1,0 +1,114 @@
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 margin-t-20">
+                <h4>ASAP Support</h4>
+                <div class="text-muted margin-t-20">
+                    <ul class="list-unstyled footer-list">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About us</a></li>
+
+                        <li><a href="#">Contact us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-3 margin-t-20">
+                <h4>Information</h4>
+                <div class="text-muted margin-t-20">
+                    <ul class="list-unstyled footer-list">
+                        <li><a href="#">Terms & Condition</a></li>
+                        <li><a href="#">About us</a></li>
+                        <li><a href="#">Jobs</a></li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-3 margin-t-20">
+                <h4>Help</h4>
+                <div class="text-muted margin-t-20">
+                    <ul class="list-unstyled footer-list">
+                        <li><a href="">FAQ</a></li>
+                        <li><a href="">Contact</a></li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-3 margin-t-20">
+                <h4>Subscribe</h4>
+                <div class="text-muted margin-t-20">
+                    <p></p>
+                </div>
+                <form class="form subscribe">
+                    <input placeholder="Email" class="form-control" required>
+                    <a href="#" class="submit"><i class="pe-7s-paper-plane"></i></a>
+                </form>
+            </div>
+        </div>
+    </div>
+</footer>
+<!--END FOOTER-->
+
+<!--START FOOTER ALTER-->
+<div class="footer-alt">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="float-left pull-none">
+                    <p class="copy-rights text-muted mb-3 mb-sm-0">{{ cur_year }} © ASAP SUpport</p>
+                </div>
+                <div class="float-right pull-none ">
+                    <ul class="list-inline social m-0">
+                        <li class="list-inline-item"><a href="" class="social-icon ml-1"><i
+                                    class="mdi mdi-facebook"></i></a></li>
+                        <li class="list-inline-item"><a href="" class="social-icon ml-1"><i
+                                    class="mdi mdi-twitter"></i></a></li>
+                        <li class="list-inline-item"><a href="" class="social-icon ml-1"><i
+                                    class="mdi mdi-linkedin"></i></a></li>
+                        <li class="list-inline-item"><a href="" class="social-icon ml-1"><i
+                                    class="mdi mdi-google-plus"></i></a></li>
+                        <li class="list-inline-item"><a href="" class="social-icon ml-1"><i
+                                    class="mdi mdi-dribbble"></i></a></li>
+                    </ul>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--START FOOTER ALTER-->
+
+<!-- Style switcher -->
+<div id="style-switcher" [style.left]="switch == 0 ? '0px' : '-189px'">
+    <div>
+        <h3>Select your color</h3>
+        <ul class="pattern">
+            <li>
+                <a (click)="onChangeColor('cyan')" class="color1"></a>
+            </li>
+            <li>
+                <a (click)="onChangeColor('red')" class="color2"></a>
+            </li>
+            <li>
+                <a (click)="onChangeColor('green')" class="color3"></a>
+            </li>
+            <li>
+                <a (click)="onChangeColor('pink')" class="color4"></a>
+            </li>
+            <li>
+                <a (click)="onChangeColor('blue')" class="color5"></a>
+            </li>
+            <li>
+                <a (click)="onChangeColor('purple')" class="color6"></a>
+            </li>
+            <li>
+                <a (click)="onChangeColor('orange')" class="color7"></a>
+            </li>
+            <li>
+                <a (click)="onChangeColor('yellow')" class="color8"></a>
+            </li>
+        </ul>
+    </div>
+    <div class="bottom">
+        <a (click)="onChangeSwitch()" class="settings rounded-right"><i class="mdi mdi-settings mdi-spin"></i></a>
+    </div>
+</div>
