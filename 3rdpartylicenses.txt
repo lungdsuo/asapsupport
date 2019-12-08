@@ -172,6 +172,8 @@ MIT
 angular-particle
 MIT
 
+asapsupport
+
 core-js
 MIT
 Copyright (c) 2014-2019 Denis Pushkarev
