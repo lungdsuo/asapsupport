@@ -8,14 +8,18 @@
 // });
 var nodemailer = require('nodemailer');
 import functions = require('firebase-functions');
-
+//const cors = require(‘cors’)({ origin: true });
 var transporter = nodemailer.createTransport('smtps://mozhui.lungdsuo@gmail.com:jngttctyicqdxckm@smtp.gmail.com');
 
 exports.sendMail = functions.https.onRequest((req, res) => {
+
+
+
+    //res.send(req.body.email);
     var mailOptions = {
         to: 'lungdsuo.mozhui@ramietech.in',
-        subject: 'Test Mail',
-        html: 'Testing the Mail'
+        subject: 'New Inquiry',
+        html: 'test'
     }
     transporter.sendMail(mailOptions, function (err: any, response: any) {
         if (err) {
