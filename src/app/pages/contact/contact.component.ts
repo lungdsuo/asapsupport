@@ -2,6 +2,7 @@ import { Email } from './../../models/email.model';
 import { EmailApiServiceService } from './../../service/email-api-service.service';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators, FormGroup } from '@angular/forms';
+import { HttpErrorResponse } from '@angular/common/http';
 
 @Component({
   selector: 'app-contact',
@@ -26,7 +27,19 @@ export class ContactComponent implements OnInit {
     email.email = this.myform.value.email;
     email.subject = this.myform.value.subject;
     email.comments = this.myform.value.comments;
-    console.log(email);
+    //console.log(email);
+    this.emailService.sendMail(email).subscribe(
+      (res) => {
+        console.log(res);
+        this.myform.reset();
+      }
+    ), (error: HttpErrorResponse) => {
+      console.log("Online reg error" + error.message);
+      // this.myRoute.navigate(["upgrademessage"]);
+
+    };
+
+    // console.log(a);
 
   }
 
