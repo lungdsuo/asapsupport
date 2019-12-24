@@ -12,6 +12,8 @@ import { PasswordForgetComponent } from './password-forget/password-forget.compo
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireStorageModule } from '@angular/fire/storage';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -22,6 +24,9 @@ import { AngularFireStorageModule } from '@angular/fire/storage';
     PasswordForgetComponent
   ],
   imports: [
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
     BrowserModule,
     LayoutModule,
     AppRoutingModule,

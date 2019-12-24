@@ -32,7 +32,7 @@
     "ng-simple-slideshow": "^1.2.9",
     "ngx-scrollspy": "^1.2.1",
     "ngx-youtube-player": "^7.1.1",
-    "rxjs": "~6.3.3",
+    "rxjs": "^6.3.3",
     "tslib": "^1.9.0",
     "zone.js": "~0.8.26"
   },

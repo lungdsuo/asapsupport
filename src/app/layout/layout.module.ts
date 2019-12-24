@@ -8,10 +8,12 @@ import { LayoutComponent } from './layout/layout.component';
 import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ScrollSpyModule } from 'ngx-scrollspy';
-
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [HeaderComponent, FooterComponent, LayoutComponent],
   imports: [
+    FormsModule,
+    ReactiveFormsModule,
     BrowserModule,
     CommonModule,
     RouterModule,
