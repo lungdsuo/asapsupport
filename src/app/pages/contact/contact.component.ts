@@ -3,6 +3,7 @@ import { EmailApiServiceService } from './../../service/email-api-service.servic
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators, FormGroup } from '@angular/forms';
 import { HttpErrorResponse } from '@angular/common/http';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-contact',
@@ -12,7 +13,7 @@ import { HttpErrorResponse } from '@angular/common/http';
 export class ContactComponent implements OnInit {
   myform: FormGroup;
   // public email: Email;
-  constructor(private fb: FormBuilder, private emailService: EmailApiServiceService) {
+  constructor(private fb: FormBuilder, private emailService: EmailApiServiceService, private toastr: ToastrService) {
     this.myform = this.fb.group({
       name: ['', Validators.required],
       email: ['', Validators.required],
@@ -21,7 +22,7 @@ export class ContactComponent implements OnInit {
     });
 
   }
-  sendMail() {
+  onSubmit() {
     const email = new Email();
     email.name = this.myform.get('name').value;
     email.email = this.myform.value.email;
@@ -31,7 +32,9 @@ export class ContactComponent implements OnInit {
     this.emailService.sendMail(email).subscribe(
       (res) => {
         console.log(res);
+        this.toastr.success("Email sent successfully")
         this.myform.reset();
+
       }
     ), (error: HttpErrorResponse) => {
       console.log("Online reg error" + error.message);
